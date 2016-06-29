@@ -29,6 +29,9 @@
   },
 
   "scripts": {
+    "pre-install-cmd": [
+      "mkdir vendor"
+    ],
     "post-install-cmd": [
       "mkdir logs",
       "chmod 777 logs",
