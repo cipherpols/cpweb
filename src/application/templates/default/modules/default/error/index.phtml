@@ -1,0 +1,44 @@
+<div class="container error">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+            <h2><?php echo $this->_('Error: ' . $this->errorCode)  ?></h2>
+            <h2 class="margin-top-0 text-primary"><?php echo $this->_($this->errorMessage); ?></h2>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <?php if (isset($this->displayExceptions) && (true === $this->displayExceptions)): ?>
+                <h3>Exception information:</h3>
+                <p>
+                    <b>Exception:</b> <?php echo get_class($this->exception) ?> <br/>
+                    <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+                </p>
+
+                <h3>Stack trace:</h3>
+                <pre><?php echo $this->exception->getTraceAsString() ?></pre>
+
+                <h3>Request Parameters:</h3>
+                <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?></pre>
+
+                <?php if (method_exists($this->exception, 'getPrevious')):?>
+                    <?php $previousException = $this->exception->getPrevious();?>
+                    <?php if (null !== $previousException):?>
+
+                        <h3>Previous exception:</h3>
+                        <h4>Exception information:</h4>
+                        <p>
+                            <b>Exception:</b> <?php echo get_class($previousException) ?> <br/>
+                            <b>Message:</b> <?php echo $previousException->getMessage() ?>
+                        </p>
+
+                        <h4>Stack trace:</h4>
+                        <pre><?php echo $previousException->getTraceAsString() ?>
+                     </pre>
+
+                    <?php endif ?>
+                <?php endif ?>
+            <?php endif ?>
+        </div>
+    </div>
+</div>

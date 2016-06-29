@@ -1,0 +1,38 @@
+{
+  "name": "cipherpols/cpweb",
+  "description": "CipherPols Official Website",
+  "license": "proprietary",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+
+  "repositories": [
+    {
+      "url": "git@github.com:cipherpols/cze.git",
+      "type": "git"
+    }
+  ],
+
+  "config": {
+    "vendor-dir": "./vendor",
+    "secure-http": false
+  },
+
+  "autoload": {
+    "classmap": [
+      "src/library/"
+    ]
+  },
+
+  "require" : {
+    "cipherpols/cze": "dev-master"
+  },
+
+  "scripts": {
+    "post-install-cmd": [
+      "mkdir logs",
+      "chmod 777 logs",
+      "touch logs/error.log"
+    ]
+  }
+}
