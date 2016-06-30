@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a20769a1a973ef3a8d7633042b812c83",
+    "hash": "4e17e04f5f07ee713713ec5ef9d265d1",
     "content-hash": "30724cecf3c7e9015479dce5aeb344cc",
     "packages": [
         {
@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:cipherpols/cze.git",
-                "reference": "730e4009bf62f9ba6119f22635d2b2a3c76aeb39"
+                "reference": "b5c471ab6227e926aa88e5d4e10c47399f21d620"
             },
             "require": {
                 "zendframework/zendframework1": "1.*"
@@ -37,7 +37,7 @@
                 }
             ],
             "description": "Zend Framework 1 Extension library by CipherPols",
-            "time": "2016-06-06 15:35:35"
+            "time": "2016-06-30 15:05:04"
         },
         {
             "name": "zendframework/zendframework1",
