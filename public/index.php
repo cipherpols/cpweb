@@ -1,41 +1,57 @@
 <?php
+
 /**
- * File index.php
+ * Laravel - A PHP Framework For Web Artisans.
  *
- * @author Tuan Duong <duongthaso@gmail.com>
- * @package CipherPols
- * @version 1.0
+ * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
-define('APPLICATION_PATH', realpath(realpath(__DIR__) . '/../src/application'));
-define('VENDOR_PATH', realpath(APPLICATION_PATH) . '/../../vendor');
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels nice to relax.
+|
+*/
 
-// APC bug workaround
-register_shutdown_function('session_write_close');
+require __DIR__.'/../bootstrap/autoload.php';
 
-define('START_TIME', microtime(true));
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
 
-// Define environment
-defined('APPLICATION_ENV')
-|| define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'live'));
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-// Ensure library/ is on include_path
-set_include_path(
-    implode(
-        PATH_SEPARATOR,
-        array(
-            realpath(APPLICATION_PATH . '/../library/'),
-            realpath(APPLICATION_PATH . '/../../vendor/'),
-            get_include_path(),
-        )
-    )
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have prepared for them.
+|
+*/
+
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
 );
 
-require_once realpath(VENDOR_PATH) . '/autoload.php';
+$response->send();
 
-// Create application, bootstrap, and run
-$application = new \Cze\Application(
-    APPLICATION_ENV,
-    \Cze\Application\Config::getConfig(APPLICATION_ENV)
-);
-$application->run();
+$kernel->terminate($request, $response);
