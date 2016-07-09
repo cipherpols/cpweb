@@ -13,3 +13,4 @@ gen
 /logs/*
 /vendor
 /public
+/bootstrap/cache
