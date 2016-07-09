@@ -1,0 +1,35 @@
+description = "Cipherpols Services"
+
+[uiFeature uiFeature1]
+feature = "Group of Professional"
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem."
+image = "assets/images/icon_professional.png"
+
+[uiFeature uiFeature2]
+feature = "Digital Marketing Solution"
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem."
+image = "assets/images/icon_digital.png"
+
+[uiFeature uiFeature3]
+feature = "Able to Work Globally"
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem."
+image = "assets/images/icon_global.png"
+==
+<section id="content-1-3" class="content-block content-1-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="underlined-title">
+                    <h1>FEATURES</h1>
+                </div>
+
+                <div class="services-wrapper">
+                    {% component 'uiFeature1' %}
+                    {% component 'uiFeature2' %}
+                    {% component 'uiFeature3' %}
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

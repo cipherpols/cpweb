@@ -1,0 +1,49 @@
+description = "Cipherpols Members"
+
+[member]
+name = "Tuan Duong"
+alias = "Zoro"
+role = "Managing Director"
+image = "assets/images/team_zoro.png"
+
+[member member2]
+name = "Duc Duong"
+alias = "Law"
+role = "President"
+image = "assets/images/team_law.png"
+
+[member member3]
+name = "Tung Nguyen"
+alias = "Coby"
+role = "Manager"
+image = "assets/images/team_coby.png"
+
+[member member4]
+name = "Minh Tran"
+alias = "Tiger"
+role = "Art Director"
+image = "assets/images/team_tiger.png"
+==
+<section id="section-team" class="content-block team-1">
+    <div class="container">
+
+        <div class="rpw">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h1>THE ONE PIECE CYPHERPOLS</h1>
+                <p>
+                    The One Piece manga and anime series features an extensive cast of characters created by Eiichiro Oda. The series takes place in a fictional universe where vast numbers of pirates, soldiers, revolutionaries, and other adventurers fight each other, using various superhuman and supernatural abilities.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            {% component 'member' %}
+            {% component 'member2' %}
+            {% component 'member3' %}
+            {% component 'member4' %}
+
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container -->
+</section>

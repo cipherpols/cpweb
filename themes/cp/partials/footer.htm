@@ -1,0 +1,50 @@
+[contactInfo]
+cellphone = "(+84) 8 38486889"
+email = "info@cipherpol@gmail.com"
+address = "123 Hoang Hoa Tham Street -  Tan Binh District - HCMC"
+telephone = "(+84) 8 38486811"
+==
+<!-- Start Footer 1-1 -->
+<section class="content-block-nopad bg-black">
+    <div class="container footer-1-1">
+
+        <div class="row">
+            <div class="col-md-7">
+
+                <div class="logo-footer">
+                    <img src="{{ 'assets/images/logo_footer.png'|theme }}" class="img-responsive logo-shape">
+                    <div class="logo-text">Cipherpols</div>
+                </div>
+
+                <div class="">
+                    <p class="decscription">
+                        The One Piece manga and anime series features an extensive cast of characters created by
+                        Eiichiro Oda. The series takes place in a fictional universe where vast numbers of pirates,
+                        soldiers, revolutionaries, and other adventurers fight each other, using various superhuman
+                        and supernatural abilities.
+                    </p>
+                </div>
+            </div>
+
+            {% component 'contactInfo' %}
+
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!--// END Footer 1-1 --><!-- Start Footer Copyright Bar -->
+<div class="copyright-bar bg-grey">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-xs-12 pull-left">
+                {% partial "social" %}
+            </div>
+
+            <div class="col-md-6 col-xs-12 pull-right">
+                <p class="text-right">
+                    &copy; Design by MinhTran. All Right Reserved 2016.
+                </p>
+            </div>
+        </div>
+    </div>
+</div><!--// END Footer Copyright Bar -->

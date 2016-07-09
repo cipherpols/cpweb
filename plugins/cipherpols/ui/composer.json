@@ -1,0 +1,29 @@
+{
+    "name": "cipherpols/ui-plugin",
+    "type": "cipherpols-plugin",
+    "description": "Cipherpols plugin",
+    "keywords": ["cipherpols", "plugin"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Duc Duong",
+            "email": "duongthienduc@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cipherpols\\Ui\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
