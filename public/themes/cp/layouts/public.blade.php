@@ -15,7 +15,6 @@
     </head>
 
     <body class="public">
-        PUBLIC
         {!! Theme::partial('header') !!}
         <div class="container content">
         {!! Theme::content() !!}

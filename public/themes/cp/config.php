@@ -71,6 +71,7 @@ return [
             $theme->asset()->usepath()->add('styles', 'css/basic.css');
 
             $theme->asset()->add('jquery', 'packages/jquery/js/jquery.min.js');
+            $theme->asset()->usepath()->add('bskit-scripts', 'js/bskit-scripts.js');
         },
 
         // Listen on event before render a layout,
