@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+        label: Name
+        type: text
+    alias:
+        label: Alias
+        type: text
+    role:
+        label: Role
+        type: text
+    order:
+        label: Order
+        type: text
+    avatar:
+        label: Avatar
+        type: mediafinder
+        mode: image
+    short_description:
+        label: Short Description
+        type: textarea
+    full_description:
+        label: Full Description
+        type: textarea
