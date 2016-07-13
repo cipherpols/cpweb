@@ -1,28 +1,6 @@
 description = "Cipherpols Members"
 
-[member]
-name = "Tuan Duong"
-alias = "Zoro"
-role = "Managing Director"
-image = "assets/images/team_zoro.png"
-
-[member member2]
-name = "Duc Duong"
-alias = "Law"
-role = "President"
-image = "assets/images/team_law.png"
-
-[member member3]
-name = "Tung Nguyen"
-alias = "Coby"
-role = "Manager"
-image = "assets/images/team_coby.png"
-
-[member member4]
-name = "Minh Tran"
-alias = "Tiger"
-role = "Art Director"
-image = "assets/images/team_tiger.png"
+[members]
 ==
 <section id="section-team" class="content-block team-1">
     <div class="container">
@@ -38,10 +16,7 @@ image = "assets/images/team_tiger.png"
 
         <div class="row">
 
-            {% component 'member' %}
-            {% component 'member2' %}
-            {% component 'member3' %}
-            {% component 'member4' %}
+            {% component 'members' %}
 
         </div>
         <!-- /.row -->

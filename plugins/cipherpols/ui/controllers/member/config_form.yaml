@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Member
+
+# Model Form Field configuration
+form: $/cipherpols/ui/models/member/fields.yaml
+
+# Model Class name
+modelClass: Cipherpols\Ui\Models\Member
+
+# Default redirect location
+defaultRedirect: cipherpols/ui/member
+
+# Create page
+create:
+    title: Create Member
+    redirect: cipherpols/ui/member/update/:id
+    redirectClose: cipherpols/ui/member
+
+# Update page
+update:
+    title: Edit Member
+    redirect: cipherpols/ui/member
+    redirectClose: cipherpols/ui/member
+
+# Preview page
+preview:
+    title: Preview Member
