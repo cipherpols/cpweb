@@ -58,6 +58,12 @@ class Plugin extends PluginBase
                         'url'         => Backend::url('cipherpols/ui/member'),
                         'permissions' => ['system.manage_updates'],
                     ],
+                    'clients' => [
+                        'label'       => 'Clients',
+                        'icon'        => 'icon-bars',
+                        'url'         => Backend::url('cipherpols/ui/client'),
+                        'permissions' => ['system.manage_updates'],
+                    ],
                 ],
             ]
         ];

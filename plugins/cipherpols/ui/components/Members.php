@@ -21,7 +21,7 @@ class Members extends ComponentBase
     }
 
     /**
-     * Get member name
+     * Get members
      * @return string
      */
     public function onRun()
