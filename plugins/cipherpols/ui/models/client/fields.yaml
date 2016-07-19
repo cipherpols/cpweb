@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+        label: Name
+        type: text
+    url:
+        label: Url
+    avatar:
+        label: Avatar
+        type: mediafinder
+        mode: image
