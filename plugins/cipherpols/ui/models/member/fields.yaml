@@ -24,7 +24,10 @@ fields:
         mode: image
     short_description:
         label: Short Description
-        type: textarea
+        type: markdown
+        mode: split
     full_description:
         label: Full Description
-        type: textarea
+        type: markdown
+        size: huge
+        mode: split
