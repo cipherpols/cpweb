@@ -1,14 +1,37 @@
 {% for member in members %}
 <div class="col-md-3 col-sm-6 team-member-wrap">
+  <a href="#memberModal{{ member.id}}" data-toggle="modal">
     <div class="team-member">
-        <img src="{{ member.avatarUrl }}" class="img-responsive" alt="Member Image">
-        <div class="team-details">
-            <div class="editContent">
-                <h4 class="member-name">{{ member.alias }}</h4>
-                <h4 class="member-name">{{ member.name }}</h4>
-                <span>{{ member.role }}</span>
+      <img src="{{ member.avatarUrl }}" class="img-responsive" alt="{{ member.name }} Avatar"/>
+      <div class="team-details">
+          <div class="editContent">
+            <h4 class="member-name">{{ member.alias }}</h4>
+            <h4 class="member-name">{{ member.name }}</h4>
+            <span>{{ member.role }}</span>
+          </div>
+      </div>
+  </div>
+  </a>
+
+  <div class="control-popup modal fade" id="memberModal{{ member.id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body row">
+          <div class="member-modal-info col-md-12">
+            <div class="col-md-4">
+              <img src="{{ member.avatarUrl }}" class="img-responsive" alt="{{ member.name }} Avatar"/>
             </div>
+            <div class="col-md-8">
+              <h4 class="member-name">{{ member.alias }}</h4>
+              <h4 class="member-name">{{ member.name }}</h4>
+            </div>
+          </div>
+          <div class="member-modal-description col-md-12">
+            {{ member.full_description|md }}
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endfor %}
