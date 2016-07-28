@@ -15,3 +15,8 @@ fields:
         label: Avatar
         type: mediafinder
         mode: image
+    description:
+        label: Description
+        type: markdown
+        size: huge
+        mode: split
