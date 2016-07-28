@@ -1,5 +1,26 @@
 {% for client in clients %}
 <div class="col-md-2 col-sm-4 col-xs-6">
-  <a href="{{ client.url }}"><img src="{{ client.avatarUrl }}" class="img-responsive" alt="{{ client.name }}"></a>
+  <a href="#clientModal{{ client.id}}" data-toggle="modal"><img
+      src="{{ client.avatarUrl }}" class="img-responsive" alt="{{ client.name }}"></a>
+
+  <div class="control-popup modal fade client-modal" id="clientModal{{ client.id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body row">
+          <div class="client-modal-info col-md-12">
+            <div class="col-md-4">
+              <img src="{{ client.avatarUrl }}" class="img-responsive" alt="{{ client.name }} Avatar"/>
+            </div>
+            <div class="col-md-8">
+              <h4 class="client-name">{{ client.name }}</h4>
+            </div>
+          </div>
+          <div class="client-modal-description col-md-12">
+            {{ client.description|md }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endfor %}

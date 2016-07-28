@@ -4,3 +4,6 @@
 1.0.2:
     - Create the Cipherpols Client table
     - create_clients_table.php
+1.0.3:
+    - Add `description` column to Cipherpols Client table
+    - add_description_col_to_clients_table.php
