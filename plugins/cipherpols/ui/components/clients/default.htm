@@ -13,7 +13,9 @@
             </div>
             <div class="col-md-8">
               <h4 class="client-name">{{ client.name }}</h4>
+              {% if client.url %}
               <p><a href="{{ client.url }}" target="_blank">{{ client.url }}</a></p>
+              {% endif %}
             </div>
           </div>
           <div class="client-modal-description col-md-12">
